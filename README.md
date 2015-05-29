@@ -1,7 +1,7 @@
- ###npm install && bower install && gulp 
+ ### npm install && bower install && gulp 
   - This will install a fresh copy of vtsore on your machine ready to run.
   
- ###./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
+ ### ./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
  - This will run the fresh copy on your local instance ready to debug !!
 
 ## Compiling on your local
