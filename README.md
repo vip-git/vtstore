@@ -1,7 +1,35 @@
-## Installing Vt store on your local
+## Compiling on your local
 
 ```js
- npm run store
+ gulp default
+  - Compiles the project as a whole except css which has to be done seperately.
+  
+ gulp css  
+  - Compiles relevant css files and minifies them to single file.
+  
+ gulp html
+  - Compiles relevant html file (index.html) and minifies them to single file.
+  
+ gulp partials
+  - Compiles relevant partial files located in partials directory and minifies them to single file.
+  
+ gulp fonts
+  - Compiles relevant fonts and copies them to www directory.
+  
+ gulp data
+  - Compiles relevant data files and copies them to www directory.
+  
+ gulp images
+  - Compiles relevant image files and copies them to www directory.
+  
+ gulp jscheck
+  - Checks javascript syntax errors and reports them before compiling javascript files.
+  
+ gulp js
+  - Compiles relevant js files and minifies them to single file.
+  
+ gulp watch
+  - Watches for any new changes related to above tasks mentioned.
 ```
 
 
