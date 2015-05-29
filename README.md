@@ -1,5 +1,6 @@
  ```js
- npm install && bower install && gulp && ./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
+ npm install && bower install && gulp 
+ && ./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
   - This will install a fresh copy of vtsore on your machine ready to run.
 ```
 
