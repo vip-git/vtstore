@@ -31,7 +31,7 @@
   },
   "scripts": {
     "clone": "git clone https://github.com/vip-git/vtstore.git temp && mv -v temp/.git . && mv -v temp/.gitignore . && mv -v temp/.bowerrc . && mv -v temp/.jshintrc . && mv -v temp/* . && rm -rf temp",
-    "install-modules": "npm install && bower install",
+    "install-modules": "npm install && bower install --allow-root option",
     "build": "./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o",
     "store": "npm run clone && npm run install-modules && gulp && gulp css && npm run build"
   },
