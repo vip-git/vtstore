@@ -1,0 +1,17 @@
+[
+  {
+    "id":"1",
+    "code":"tenpercent",
+    "discount":10
+  },
+  {
+    "id":"2",
+    "code":"twentypercent",
+    "discount":20
+  },
+  {
+    "id":"2",
+    "code":"fiveoff",
+    "discount":5
+  }
+]

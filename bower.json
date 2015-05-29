@@ -1,0 +1,24 @@
+{
+  "name": "vtstore",
+  "version": "1.0.0",
+  "homepage": "http://www.vipintanna.com",
+  "authors": [
+    "Vipin Tanna <contact@vipintanna.com>"
+  ],
+  "prefix": "vendor",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "3.2.0",
+    "angular": "~1.3.15",
+    "modernizr": "~2.8.3",
+    "angular-route": "~1.3.15",
+    "angular-animate": "~1.3.15",
+    "angular-loading-bar": "~0.7.1",
+    "fontawesome": "~4.3.0"
+  }
+}

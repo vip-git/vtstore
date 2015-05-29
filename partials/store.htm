@@ -1,0 +1,68 @@
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <ul class="isotope-filter properties-filter">
+                <li class="selected"><a href="javascript:void(0);" ng-click="myFilter('category',null)"><span>All</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','wfootwear')"><span>Women’s Footwear</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','mfootwear')"><span>Men’s Footwear</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','wcasualwear')"><span>Women’s Casualwear</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','mcasualwear')"><span>Men’s Casualwear</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','wformalwear')"><span>Women’s Formalwear</span></a></li>
+                <li><a href="javascript:void(0);" ng-click="myFilter('category','mformalwear')"><span>Man’s Formalwear</span></a></li>
+            </ul>
+            <div class="properties-isotope">
+
+                <div ng-repeat="product in pagedItems[currentPage]" class="col-sm-4 item {{product.category}}">
+                    <div class="property-box">
+                        <div class="property-box-image" ng-click=go("/products/"+product.code);>
+                            <a href="javascript:void(0);">
+                                <img ng-src="images/products/{{product.src}}" alt="{{product.name}}"/>
+                            </a>
+                        </div><!-- /.property-image -->
+                        <div class="property-box-bottom">
+                            <span class="property-box-title">
+                               {{product.name}}
+                            </span>
+                            <div class="property-box-price">
+                                {{product.price | currency : '£'}}
+                                <span class="multiplyCartItem" ng-show="cart.getTotalCount(product.code) > 0"><i class="fa fa-times"></i>{{cart.getTotalCount(product.code)}}</span>
+                            </div><!-- /.property-box-price -->
+
+                            <a href="javascript:void(0);" class="property-box-view">
+                                <button class="btn btn-cart" ng-disabled="(product.stock - cart.getTotalCount(product.code) == 0) ? 1 : 0;" ng-click="cart.addItem(product.code, product.category, product.name, product.price, product.stock, 1)">
+                                          Add cart
+                                    </button>
+                            </a><!-- /.property-box-view -->
+                             <div class="os" ng-show="(product.stock - cart.getTotalCount(product.code) == 0) ? 1 : 0;"> OUT OF STOCK </div>
+                        </div><!-- /.property-box-bottom -->
+                    </div><!-- /.property-box -->
+                </div>
+
+            </div><!-- /.properties-isotope -->
+        </div><!-- /.row -->
+    </div>
+</div><!-- /.content -->
+</div><!-- /.container -->
+
+<div id="cbp-vm" class="cbp-vm-switcher" ng-class="{true: '', false: 'activegrid'}[isActive]">
+<div class="col-md-12 store-cart-content store-cart-footer">
+<div class="col-xs-6 col-md-6 store-down-bottom">
+    <div class='bt-direction'>
+        <button class="btn store-pag-button fa fa-angle-left" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+            &nbsp;&nbsp;Previous
+        </button>
+        <p>{{currentPage + 1}}/{{numberOfPages}}</p>
+        <button class="btn btn-pag-next fa" ng-disabled="currentPage >= products.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+           Next &nbsp;&nbsp;
+        </button>
+    </div>
+</div>
+</div>
+
+<!-- Filter Images-->
+<script type="text/javascript">
+$('.filter-button-top button').on('click', function () {
+$('.filter-button-top button').removeClass('active');
+$(this).addClass('active');
+});
+</script>

@@ -1,0 +1,308 @@
+
+@media only screen and (max-width:1200px) {
+    .tabs-menu {
+        display:none
+    }
+
+    .activegrid ul.nav-pills li {
+        width:100%;
+        padding:30px 20px 20px 30px;
+        margin:0;
+        display:block;
+        min-height:220px;
+        vertical-align:top;
+        border-right:1px solid #EEE;
+        cursor: pointer;
+    }
+
+    .activegrid ul.nav-pills li img {
+        width: 200px;
+        height: 200px;
+        text-align:center;
+        float:left;
+        margin-bottom:20px;
+        -webkit-transition:all .3s ease-out;
+        -moz-transition:all .3s ease-out;
+        -o-transition:all .3s ease-out;
+        transition:all .3s ease-out
+    }
+
+    .activegrid .nav-pills li .number {
+        border:#FFF;
+        color:rgba(255,255,255,.4);
+        float:right;
+        font-family:BebasNeuewebfont,Sans-Serif;
+        font-size:126px;
+        margin-top:-50px;
+        z-index:1000
+    }
+
+    .activegrid .content_desc {
+        float:right;
+        font-size:18px;
+        margin-right:70px;
+        margin-top:10px;
+        padding:10px 10px 10px 0
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait) {
+    .store-pag-button {
+        margin-left:30%
+    }
+
+    .btn-block {
+        width:100%
+    }
+
+    .table {
+        margin-bottom:30px
+    }
+
+    .quantity-prod {
+        width:60px
+    }
+
+    .cart-txt-top {
+        margin-top:0
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+    .store-down-bottom p {
+        margin-left:4%
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .table {
+        margin-left:0;
+        margin-bottom:15px
+    }
+
+    .btn-block {
+        width:100%
+    }
+
+    .activegrid ul.nav-pills li img {
+        margin-bottom:80px
+    }
+
+    .activegrid .content_desc {
+        margin-right:10px
+    }
+
+    .bt-direction {
+        float:right
+    }
+
+    .content-search {
+        width:100%;
+        float:left
+    }
+
+    .store-button-top {
+        height:110px
+    }
+
+    div.store-cart-footer {
+        height:120px
+    }
+
+    .store-down-bottom {
+        float:left;
+        margin-top:15px
+    }
+
+    .store-pag-button {
+        float:left;
+        margin-left:0
+    }
+
+    .btn-pag-next {
+        float:left
+    }
+
+    .store-down-bottom p {
+        margin-left:0;
+        margin-right:0;
+        padding:0 10px
+    }
+
+    .quantity-prod {
+        width:60px
+    }
+}
+
+@media only screen and (max-width:481px) {
+    .container h1.well {
+        font-size:28.5px
+    }
+
+    .activegrid ul.nav-pills li img {
+        float:none
+    }
+
+    .activegrid .content_desc {
+        float:left
+    }
+
+    .content-store,.store-down-bottom {
+        width:100%
+    }
+
+    .bt-direction {
+        float:left;
+        width:100%
+    }
+
+    .flr-top-first {
+        margin:10px 5px 0 10px;
+        font-size:12px;
+        line-height:15px
+    }
+
+    .activegrid .content_desc {
+        margin-right:40px
+    }
+
+    .activegrid ul.nav-pills li img {
+        margin-bottom:30px
+    }
+
+    button.flr-top {
+        font-size:12px;
+        line-height:15px
+    }
+
+    .content-search {
+        margin:10px 45px 0 0
+    }
+
+    .quantity-prod {
+        width:30px
+    }
+
+    .table tr td {
+        font-size:13px
+    }
+
+    .cart-txt-top img {
+        float:none
+    }
+
+    .detail-desc p {
+        line-height:22px
+    }
+}
+
+@media only screen and (max-width:481px) and (orientation:landscape) {
+    .bt-direction {
+        float:right;
+        width:100%
+    }
+}
+
+@media only screen and (max-width:481px) and (orientation:landscape) {
+    .content-search {
+        margin:10px 50px 0 0
+    }
+
+    .filter-button-top {
+        margin-left:12px
+    }
+
+    div.input-append .quantity-prod {
+        width:50%
+    }
+
+    .cart-txt-shop p {
+        font-size:12px;
+        margin-top:5px
+    }
+}
+
+@media only screen and (max-width:385px) {
+    .table td.detail-img,.table td.detail-img2 {
+        display:none
+    }
+
+    .detail-desc p,.detail-title p {
+        font-size:12px;
+        line-height:30px
+    }
+
+    .cart-txt-top img {
+        float:none
+    }
+
+    div.input-append .quantity-prod {
+        width:30px
+    }
+
+    .quantity-prod {
+        padding:7px 4px 8px
+    }
+
+    .cart-txt-shop {
+        padding:30px 10px 20px
+    }
+
+    .content-backcolor .col-md-8 {
+        padding:0
+    }
+
+    .cart-txt-shop p {
+        font-size:11px;
+        margin-top:5px
+    }
+
+    .table tr td {
+        font-size:11px
+    }
+}
+
+@media only screen and (max-width:321px) {
+    body {
+        padding-left:5px;
+        padding-right:5px
+    }
+
+    .container {
+        width:100%;
+        padding:0;
+    }
+
+    .container h1.well {
+        font-size:24px
+    }
+
+    .activegrid ul.nav-pills li {
+        padding:30px 10px 20px
+    }
+
+    .flr-top-first {
+        margin:10px 4px 0 0;
+        font-size:11px;
+        padding:8px 4px
+    }
+
+    .nav-pills li a {
+        float:left
+    }
+
+    button.flr-top {
+        font-size:11px;
+        line-height:15px;
+        padding:8px 9px;
+        margin:10px 2px 0 0
+    }
+
+    .content-search {
+        margin:10px 39px 0 0
+    }
+
+    .tab-shop td {
+        font-size:12px
+    }
+}

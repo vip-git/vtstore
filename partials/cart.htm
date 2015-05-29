@@ -1,0 +1,117 @@
+
+<div id="prod-top" class="prod-top-img col-md-12">
+    <div class="cart-txt-shop">
+        <p class="text-info">
+        Thanks for shopping at the VtStore.<br />
+        This is your shopping cart. Here you can edit the items,
+        go back to the store, clear the cart, or check out.
+    </p>
+    </div>
+</div>
+
+
+<div class="voucher col-md-12 form-group {{resultClass.mainDiv}}">
+    <div class="total_div">
+        <h3> Total : {{cart.getTotalPrice()-cart.getTotalDiscount() | currency : '£'}}</h3>
+    </div>
+    <div class="parent_div">
+        <input type="text" value="fiveoff" ng-model="voucher" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" class="form-control"/>
+        <span class="glyphicon form-control-feedback {{resultClass.span}}" aria-hidden="true"></span>
+        <input type="submit" ng-click="checkCode(voucher)" class="btn form-control" value="apply"/>
+    </div>
+</div>
+
+<div class="col-md-12 content-backcolor">
+    <div class="col-md-8">
+
+        <!-- items -->
+        <table class="table table-bordered tab-shop">
+
+            <!-- header -->
+            <tr class="well">
+                <td><b>Item</b></td>
+                <td class="tdCenter"><b>Quantity</b></td>
+                <td class="tdRight"><b>Price</b></td>
+                <td class="tdRight"><b>x</b></td>
+            </tr>
+
+            <!-- empty cart message -->
+            <tr ng-hide="cart.getTotalCount() > 0" >
+                <td class="tdCenter" colspan="4">
+                    Your cart is empty.
+                </td>
+            </tr>
+
+            <!-- cart items -->
+            <tr ng-repeat="item in cart.items | orderBy:'name'">
+                <td>{{item.name}}</td>
+                <td class="tdCenter">
+                    <div class="input-append">
+                        <!-- use type=tel instead of  to prevent spinners -->
+                        <input  readonly
+                                class="col-md-2 text-center quantity-prod" type="tel"
+                                ng-model="item.quantity"
+                                ng-change="cart.saveItems()" />
+                        <button
+                                class="btn btn-success" type="button"
+                                ng-disabled="(item.stock - cart.getTotalCount(item.code) == 0) ? 1 : 0;"
+                                ng-click="cart.addItem(item.code, item.category, item.name, item.price, item.stock, +1)">+</button>
+                        <button
+                                class="btn btn-inverse" type="button"
+                                ng-disabled="item.quantity <= 1"
+                                ng-click="cart.addItem(item.code, item.category, item.name, item.price, item.stock, -1)">-</button>
+                    </div>
+                </td>
+                <td class="tdRight">{{item.price * item.quantity | currency : '£'}}</td>
+                <td class="tdCenter" title="remove from cart">
+                    <a href="javascript:void(0);" class="remove_item" ng-click="cart.addItem(item.code, item.category, item.name, item.price, item.stock, -10000000)" >
+                        <i class="fa fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+
+            <!-- discount -->
+            <tr class="well">
+                <td><b>Discount</b></td>
+                <td class="tdCenter"><b> - </b></td>
+                <td class="tdRight"><b>{{cart.getTotalDiscount() | currency : '£'}}</b></td>
+                <td />
+            </tr>
+
+            <!-- footer -->
+            <tr class="well">
+                <td><b>Total</b></td>
+                <td class="tdCenter"><b>{{cart.getTotalCount()}}</b></td>
+                <td class="tdRight"><b>{{cart.getTotalPrice()-cart.getTotalDiscount() | currency : '£'}}</b></td>
+                <td />
+            </tr>
+        </table>
+    </div>
+
+    <!-- buttons -->
+    <div class="col-md-4">
+        <p class="text-info">
+            <button
+                    class="btn btn-block"
+                    onclick="window.location.hash='store'">
+                <i class="fa fa-home" > &nbsp;&nbsp;Back to store </i>
+            </button>
+            <button
+                    class="btn btn-block btn-danger"
+                    ng-click="cart.clearItems()"
+                    ng-disabled="cart.getTotalCount() < 1" >
+                <i class="icon-trash icon-white fa fa-trash-o"> &nbsp;&nbsp;Clear cart </i>
+            </button>
+        </p>
+
+        <p class="text-info">
+            <button
+                    class="btn btn-block btn-primary"
+                    ng-click="cart.checkout('PayPal')"
+                    ng-disabled="cart.getTotalCount() < 1">
+                <i class="icon-ok icon-white fa fa-paypal"> &nbsp;&nbsp;Check out using PayPal </i>
+            </button>
+
+        </p>
+    </div>
+</div>
