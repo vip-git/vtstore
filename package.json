@@ -20,7 +20,8 @@
     "gulp-watch": "^4.2.4",
     "http-server": "^0.8.0", 
     "jshint-stylish": "^1.0.2",
-    "map-stream": "0.0.5"
+    "map-stream": "0.0.5",
+    "bower": "~1.4.1"
   },
   "dependencies": {
     "gulp-filter": "^2.0.2",
@@ -29,11 +30,10 @@
     "main-bower-files": "^2.8.0"
   },
   "scripts": {
-    "clean": "shopt -s extglob && rm -rf !package.json && rm -rf .git && rm -rf .gitignore && rm -rf .bowerrc && rm -rf .jshintrc ",
-    "clone": "git clone https://vshk@bitbucket.org/vshk/store.git temp && mv -v temp/.git . && mv -v temp/.gitignore . && mv -v temp/.bowerrc . && mv -v temp/.jshintrc . && mv -v temp/* . && rm -rf temp",
+    "clone": "git clone https://github.com/vip-git/vtstore.git temp && mv -v temp/.git . && mv -v temp/.gitignore . && mv -v temp/.bowerrc . && mv -v temp/.jshintrc . && mv -v temp/* . && rm -rf temp",
     "install-modules": "npm install && bower install",
     "build": "./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o",
-    "store": "npm run clean && npm run clone && npm run install-modules && gulp && gulp css && npm run build"
+    "store": "npm run clone && npm run install-modules && gulp && gulp css && npm run build"
   },
   "license": "MIT"
 }
