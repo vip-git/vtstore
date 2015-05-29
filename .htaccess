@@ -1,0 +1,3 @@
+RewriteEngine on
+RewriteRule ^index\.html$ www [L]
+RewriteRule ^$ www [L]
