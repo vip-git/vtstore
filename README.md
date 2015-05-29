@@ -1,6 +1,14 @@
 ## Compiling on your local
 
 ```js
+ npm install && bower install && gulp 
+  - This will install a fresh copy of vtsore on your machine ready to run.
+  
+ ./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
+ - This will run the fresh copy on your local instance ready to debug !!
+ 
+ These are the following gulp tasks you could use :
+ 
  gulp default
   - Compiles the project as a whole except css which has to be done seperately.
   
