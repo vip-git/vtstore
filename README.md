@@ -1,4 +1,4 @@
- ## Installing on your local
+## Installing on your local
  ```js
  npm install && bower install && gulp 
  && ./node_modules/http-server/bin/http-server -a localhost -p 9090 www/ -o
