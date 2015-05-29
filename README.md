@@ -1,3 +1,16 @@
+## Prerequisites
+ ```js
+ This projects assumes git, node and Bower are installed globally. 
+ 
+ If thats not the case you can do so by using following guidelines:
+ Example on Ubuntu:
+  - sudo apt-get install git nodejs
+ - https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager 
+ 
+ if you get in trouble with this feel free to email : contact@vipintanna.com
+```
+
+
 ## Installing on your local
  ```js
  npm install && bower install && gulp 
